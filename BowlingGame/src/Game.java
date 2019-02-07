@@ -11,7 +11,11 @@ public class Game {
 		int score = 0;
 		int flameIndex = 0;
 		for (int frame = 0; frame < 10; frame++) {
-			if (isSpare(flameIndex)) {
+			if (rolls[flameIndex] == 10) {	// strike
+				score += 10 + rolls[flameIndex + 1] + rolls[flameIndex + 2];
+				flameIndex ++;
+			}
+			else if (isSpare(flameIndex)) {
 				score += 10 + rolls[flameIndex + 2];
 				flameIndex += 2;
 			} else {
