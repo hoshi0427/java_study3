@@ -25,5 +25,6 @@ public class BowlingGameTest extends TestCase {
 			g.roll(1);
 		}
 		assertEquals( 20, g.score());
+		//git練習です
 	}
 }
