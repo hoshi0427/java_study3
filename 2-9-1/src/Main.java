@@ -1,4 +1,6 @@
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class Main {
 
@@ -22,6 +24,8 @@ public class Main {
 
 //		FileOperation.fileWrite(65);
 
-		FileOperation.fWExceptionHandling();
+//		FileOperation.fWExceptionHandling();
+
+		Files.copy(Paths.get(args[0]), Paths.get(args[1]));
 	}
 }

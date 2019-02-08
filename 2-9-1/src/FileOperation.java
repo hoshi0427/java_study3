@@ -14,7 +14,7 @@ public class FileOperation {
 	public static void fWExceptionHandling() {
 		FileWriter fw = null;
 		try {
-			fw = new FileWriter("rpgsave.dat,true");
+			fw = new FileWriter("rpgsave.dat",true);
 			fw.write('A');
 			fw.flush();
 		} catch (IOException e) {
