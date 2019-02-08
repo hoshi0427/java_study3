@@ -1,4 +1,3 @@
-import java.io.FileReader;
 import java.io.IOException;
 
 public class Main {
@@ -10,15 +9,17 @@ public class Main {
 //		fw.flush();
 //		fw.close();
 
-		FileReader fr = new FileReader("rpgsave.dat");
-		System.out.println("全てのデータを読んで表示します。");
-		int i = fr.read();
-		while(i != -1) {
-			char c = (char) i;
-			System.out.print(c);
-			i = fr.read();
-		}
-		System.out.println("ファイルの末尾に到着しました");
-		fr.close();
+//		FileReader fr = new FileReader("rpgsave.dat");
+//		System.out.println("全てのデータを読んで表示します。");
+//		int i = fr.read();
+//		while(i != -1) {
+//			char c = (char) i;
+//			System.out.print(c);
+//			i = fr.read();
+//		}
+//		System.out.println("ファイルの末尾に到着しました");
+//		fr.close();
+
+		FileOperation.fileWrite(65);
 	}
 }
