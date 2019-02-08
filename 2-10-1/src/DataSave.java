@@ -7,10 +7,12 @@ public class DataSave {
 	public static	void saveHeroToFile(Hero h){
 		Writer w = null;
 		try {
-			w = new BufferedWriter(new FileWriter("rpgsave.dat"));
-			w.write(h.getName() + "\n");
-			w.write(h.getHp() + "\n");
-			w.write(h.getMp() + "\n");
+			w = new BufferedWriter(new FileWriter("rpgsave.csv"));
+			w.write(h.getName());
+			w.write(",");
+			w.write(String.valueOf(h.getHp()));
+			w.write(",");
+			w.write(String.valueOf(h.getMp()));
 			w.flush();
 		} catch (IOException e) {
 			e.printStackTrace();
