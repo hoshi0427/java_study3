@@ -1,4 +1,5 @@
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileOperation {
@@ -8,5 +9,22 @@ public class FileOperation {
 		fos.flush();
 		fos.close();
 		System.out.println("追記しました");
+	}
+
+	public static void fWExceptionHandling() {
+		FileWriter fw = null;
+		try {
+			fw = new FileWriter("rpgsave.dat,true");
+			fw.write('A');
+			fw.flush();
+		} catch (IOException e) {
+			System.out.println("ファイルの書き込みエラー");
+		} finally {
+			if (fw != null) {
+				try {
+				fw.close();
+				} catch (IOException e2) { }
+			}
+		}
 	}
 }

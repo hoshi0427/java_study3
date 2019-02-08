@@ -20,6 +20,8 @@ public class Main {
 //		System.out.println("ファイルの末尾に到着しました");
 //		fr.close();
 
-		FileOperation.fileWrite(65);
+//		FileOperation.fileWrite(65);
+
+		FileOperation.fWExceptionHandling();
 	}
 }
